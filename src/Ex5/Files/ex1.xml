@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Periodicals>
+    <periodicalList>
+        <periodical>
+            <title>MagazUA</title>
+            <types>
+                <type>magazine</type>
+            </types>
+            <frequency>annually</frequency>
+            <chars>
+                <isColor>true</isColor>
+                <isGloss>true</isGloss>
+                <pages>500</pages>
+                <index>123456AA</index>
+            </chars>
+        </periodical>
+        <periodical>
+            <title>NewsUA</title>
+            <types>
+                <type>newspaper</type>
+            </types>
+            <frequency>daily</frequency>
+            <chars>
+                <isColor>true</isColor>
+                <isGloss>false</isGloss>
+                <pages>50</pages>
+                <index>1456AA</index>
+            </chars>
+        </periodical>
+    </periodicalList>
+</Periodicals>

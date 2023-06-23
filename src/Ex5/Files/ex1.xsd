@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Periodicals" type="PeriodicalsType"/>
+    <xs:complexType name="typesType">
+        <xs:sequence>
+            <xs:element name="type">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="magazine"/>
+                        <xs:enumeration value="newspaper"/>
+                        <xs:enumeration value="booklet"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="charsType">
+        <xs:sequence>
+            <xs:element type="xs:boolean" name="isColor" minOccurs="0"/>
+            <xs:element type="xs:boolean" name="isGloss" minOccurs="0"/>
+            <xs:element type="xs:string" name="pages"/>
+            <xs:element type="xs:string" name="index"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="periodicalType">
+        <xs:sequence>
+            <xs:element type="xs:string" name="title"/>
+            <xs:element type="typesType" name="types"/>
+            <xs:element name="frequency">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="annually"/>
+                        <xs:enumeration value="monthly"/>
+                        <xs:enumeration value="daily"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element type="charsType" name="chars"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="periodicalListType">
+        <xs:sequence>
+            <xs:element type="periodicalType" name="periodical" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="PeriodicalsType">
+        <xs:sequence>
+            <xs:element type="periodicalListType" name="periodicalList"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

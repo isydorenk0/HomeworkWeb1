@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Periodicals xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation = "ex1.xsd">
+    <periodicalList>
+        <periodical>
+            <title>MagazUA</title>
+            <types>
+                <type>magazine</type>
+            </types>
+            <frequency>annually</frequency>
+            <chars>
+                <isColor>true</isColor>
+                <isGloss>true</isGloss>
+                <pages>500</pages>
+                <index>123456AA</index>
+            </chars>
+        </periodical>
+        <periodical>
+            <title>NewsUA</title>
+            <types>
+                <type>newspaper</type>
+            </types>
+            <frequency>daily</frequency>
+            <chars>
+                <isColor>true</isColor>
+                <isGloss>false</isGloss>
+                <pages>50</pages>
+                <index>1456AA</index>
+            </chars>
+        </periodical>
+    </periodicalList>
+</Periodicals>
